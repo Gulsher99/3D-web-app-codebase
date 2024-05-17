@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Coca Cola</title>
+  
+    <!-- CSS links -->
+    <link rel="stylesheet" href="Css/style.css"> 
+    <link rel="stylesheet" href="Css/responsivestyle.css">
+  
+    <!-- x3dom server files -->
+    <script type="text/javascript" src="http://www.x3dom.org/download/x3dom.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css">
+  
+    <!-- Bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+<body>
+  <header>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg custom-navbar" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <div>
+            <span class="cola modify">Coca Cola</span>
+            <span class="journey modify">Journey</span>
+            <div class="rem-logo modify">Refreshing the world, one story at a time</div>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active modify" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link modify" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link modify" href="drinks.html">Drinks</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link modify" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mb-5">
+    <div class="container can-container">
+      <div class="row">
+        <div class="col can-veiwer-container">
+          <div class="can-viewer" style="width: 100%; height: 300px;">
+            <X3D width="100%" height="300px" id="scene">
+                <Scene>
+                    <Viewpoint id="front-camera" position="0 0 10" orientation="0 0 1 0" fieldOfView="0.5"></Viewpoint>
+        
+                    <Background skyColor='0.1 0.1 0.1'></Background>
+                    <DirectionalLight direction='1 1 1' intensity='0.5'></DirectionalLight>
+                    <DirectionalLight direction='1 -1 1' intensity='0.5'></DirectionalLight>
+                    <DirectionalLight direction='-1 1 -1' intensity='0.5'></DirectionalLight>
+        
+                    <!-- Placeholder for 3D models -->
+                    <Transform id="modelTransform" translation="0 1.5 0" scale="0.3 0.3 0.3" rotation="0 1 0 1.5">
+                        <Inline id="model" nameSpaceName="model" mapDEFToID="true" url="" render="true"></Inline>
+                    </Transform>
+                    <!-- (0 1.5 0)(0.3 0.3 0.3)  -->
+                </Scene>
+            </X3D>
+        </div>
+
+        <div class="info w-100 d-flex align-items-center justify-content-around">
+          <h3>Select Can:</h3>
+          
+          <div>
+            <select class="form-select" aria-label="Default select example">
+              <option selected data-model-name="">Select a Can</option>
+              <option value="1" data-model-name="cocacola">Coca Cola</option>
+              <option value="2" data-model-name="sprite">Sprite</option>
+              <option value="3" data-model-name="drpepper">Dr Pepper</option>
+              <option value="4" data-model-name="cokebottle">Sprite Bottle</option>
+            </select>
+          </div>
+      </div>
+
+      <div class="w-100 p-2">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="descriptionTextarea" style="height: 120px;" readonly></textarea>
+            <label for="descriptionTextarea">Description</label>
+        </div>
+    </div>
+          
+          
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col d-flex align-items-center justify-content-between">
+          <a class="modify foot" href="devotion.html">&copy; 2017 Mobile Web 3D Applications</a>
+          <div class="custom-icons">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+            </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" class="bi bi-google" viewBox="0 0 16 16">
+              <path d="M15.545 6.558a9.4 9.4 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.7 7.7 0 0 1 5.352 2.082l-2.284 2.284A4.35 4.35 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.8 4.8 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.7 3.7 0 0 0 1.599-2.431H8v-3.08z"/>
+            </svg>
+
+           
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Your custom script -->
+  <script src="Script/script.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKkJhH0LTZOvr1fhFi4JrytXnKNowqsls",
+      authDomain: "coca-cola-x3d-model.firebaseapp.com",
+      projectId: "coca-cola-x3d-model",
+      storageBucket: "coca-cola-x3d-model.appspot.com",
+      messagingSenderId: "847551926343",
+      appId: "1:847551926343:web:3cf322641c2d2fd89f6162",
+      measurementId: "G-WJF03N74RE"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="https://www.x3dom.org/download/x3dom.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

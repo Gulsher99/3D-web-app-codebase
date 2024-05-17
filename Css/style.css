@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    /* border: 2px solid red; */
+}
+
+
+@font-face {
+    font-family:logo;
+    src: url(LOKICOLA.TTF);
+}
+
+
+/* coca cola logo code is below */
+.modify{
+    color: white;
+    text-decoration: none;
+}
+.cola{
+    font-family: logo;
+    font-size: 50px;
+    color: white;
+}
+
+.journey{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 40px;
+    color: white;
+}
+.rem-logo{
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    color: white;
+}
+
+
+/* navbar custom styling code is below */
+
+header{
+    background-color: #880808;
+}
+
+/* main content custom styling code is below */
+/* h-28rem */
+.custom-banner{
+    background-image: url(main_3D.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 28rem;
+
+}
+
+.custom-card-banner{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgba(255, 255, 255, 0.575);
+    width: 70%;
+}
+.history-col{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.history-col div{
+    text-align: center;
+}
+
+.history-col p, h4{
+    width: 50%;
+    display: inline-block;
+}
+
+.custom-card{
+    margin: 10px 0px;
+}
+
+.response-history{
+    display: none;
+}
+/* footer custom styling code is below */
+
+footer{
+    padding: 5px;
+    background-color: #880808;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* drinks page styling */
+
+
+/* can container styling is below */
+.can-container{
+    margin: 25px 0px;
+    background-color: rgba(255, 255, 255, 0.575);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 20px;
+}
+
+.can-veiwer{
+    border: 1px solid black;
+    width: 100%;
+}
+
+.can-veiwer-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    margin: 20px 0px;
+}
+
